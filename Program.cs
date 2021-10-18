@@ -38,12 +38,10 @@ namespace _2048
             }
             return count;
         }
-        public static void DisplayGameArray(bool firstTime = false)
+        public static void DisplayGameArray()
         {
-            if(firstTime)
-                Console.WriteLine("-----------------------------");
-            else 
-                // Console.SetCursorPosition(0, 1);
+            Console.Clear();
+            Console.WriteLine("-----------------------------");
             for (int i = 0; i < 4; i++)
             {
                 for (int l = 0; l < 4; l++)
@@ -213,7 +211,7 @@ namespace _2048
         static void Main(string[] args)
         {
             InitGameArray();
-            DisplayGameArray(true);
+            DisplayGameArray();
             while(!CheckIfLost())
             {
                 GenerateCell();
